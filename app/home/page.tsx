@@ -117,11 +117,11 @@ export default function Home() {
  <section className="py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-3">
         {/* Left Text */}
-        <div>
-          <p className="mb-2 text-xs font-semibold text-[#1E2F5C]">
+        <div className="h-full">
+          <p className="mb-2 text-sm  text-[#1E2F5C]">
             About Us
           </p>
-          <p className="text-sm leading-relaxed text-gray-600">
+          <p className="text-lg leading-relaxed font-semibold text-gray-600">
             Zone 4 is a home filled with hope to the hopeless and
             helping them to fulfill God’s calling
           </p>
@@ -151,11 +151,11 @@ export default function Home() {
           <p className="md:text-3xl font-semibold">
             <span className="text-[#D9A441]">Loving</span> <span className="text-[#1E2F5C]">God</span>
           </p>
-          <p className="mt-1 md:text-3xl font-semibold text-[#1E2F5C]">
+          <p className="mt-1 md:text-3xl font-semibold">
            <span className="text-[#1E2F5C]"> Care for</span> <span className="text-[#D9A441]">Humanity</span>
           </p>
           <p className="mt-1  md:text-3xl font-semibold text-[#D9A441]">
-            Hope filled
+            <span className="text-[#D9A441]">Hope</span> <span className="text-[#1E2F5C]">filled</span>
           </p>
         </div>
       </div>
