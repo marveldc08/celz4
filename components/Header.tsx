@@ -2,10 +2,12 @@
 "use client";
 import { useState } from "react"
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean; isStatic?:boolean }) {
   const [isMobile, setIsMobile] = useState(false);
-  console.log(isScrolled)
+  const pathName = usePathname()
+
   return (
     <header
       className={`absolute top-0 z-50 w-full ${
@@ -20,7 +22,9 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
           <nav className="hidden items-center gap-8 md:flex">
             <a
               href="/"
-              className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
+              className={`text-sm font-medium "text-white/90 hover:text-white border-b-white  hover:border-b-2 ${
+                pathName == "/" && "border-b-3"
+              }`}
             >
               Home
             </a>
@@ -64,7 +68,9 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             </a>
             <a
               href="/join-service"
-              className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
+              className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 ${
+                pathName == "/join-service" && "border-b-3"
+              } `}
             >
               Join the service
             </a>
@@ -115,7 +121,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2 ${pathName == "/" && "border-b-3"}`}
             >
               Home
             </a>
@@ -197,7 +203,9 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2 ${
+                pathName == "/join-service" && "border-b-3"
+              }`}
             >
               Contact Us
             </a>
@@ -223,7 +231,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
         </div>
       )}
 
-      {/* {isStatic && (
+      {isStatic && (
         <div
           className={`mx-auto flex ${isMobile ? "hidden" : "flex"} ${
             isStatic && "text-[#171717]"
@@ -240,7 +248,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               className={`text-sm font-medium  ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2 ${pathName == "/" && "border-b-3"}`}
             >
               Home
             </a>
@@ -305,7 +313,9 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               className={`text-sm font-medium  ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
-              } hover:border-b-2 `}
+              } hover:border-b-2 ${
+                pathName == "/join-service" && "border-b-3"
+              }`}
             >
               Join the service
             </a>
@@ -336,7 +346,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             Login
           </button>
         </div>
-      )} */}
+      )}
       <div
         className={`flex flex-col md:hidden ${
           isMobile ? "flex" : "hidden"
@@ -347,7 +357,9 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
         </div>
         <ul className="text-center px-3">
           <li
-            className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
+            className={` rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+              pathName == "/" && "bg-[#171717] text-white"
+            }`}
             onClick={() => setIsMobile(false)}
           >
             <a href="/">Home</a>
@@ -389,7 +401,9 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             <a href="#">Media</a>
           </li>
           <li
-            className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
+            className={` rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+              pathName == "/join-service" && "bg-[#171717] text-white"
+            }`}
             onClick={() => setIsMobile(false)}
           >
             <a href="/join-service">Join the service</a>
