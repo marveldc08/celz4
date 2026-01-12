@@ -338,11 +338,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
           >
             <Menu />
           </button>
-          <button
-            aria-label="Open menu"
-            className={`hidden md:block rounded-md px-4 py-1 text-white ${
-              isStatic && "bg-[#202C5E]"
-            }`}
+          <button aria-label="Open menu" className={`hidden md:block rounded-md px-4 py-1 text-white ${isStatic && "bg-[#202C5E]"}`}
           >
             Login
           </button>

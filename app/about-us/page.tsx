@@ -133,6 +133,106 @@ const page = () => {
             </div>
           </div>
         </section>
+        <section className="w-full bg-linear-160 from-[#ffffff] to-[#d6dbef] p-5">
+          <div className="w-full text-center p-10 mb-5">
+            <p>Our Focus</p>
+            <h2 className="text-[#262626] text-md text-2xl font-bold md:text-3xl mb-3">
+              What we stand for
+            </h2>
+          </div>
+          <div className="flex flex-col md:flex-row justify-between gap-8 align-middle md:px-50 w-full">
+            <div className="bg-white rounded-lg p-5 ">
+              <div>
+                <Image
+                  src="/images/about-win.png"
+                  width={1000}
+                  height={1000}
+                  alt="image"
+                />
+              </div>
+              <div className="py-6">
+                <h3 className="text-[#334797] text-md text-2xl font-bold mb-3">
+                  WIN
+                </h3>
+                <p className="text-sm text-[#525252] mb-3">
+                  We are fueled by a burning passion for the lost and a mandate
+                  to manifest the liquid love of Christ to our world as given to
+                  us by our man of God, Rev Dr Chris Oyakhilome DSc.DSc.DD. 
+                </p>
+                <p className="text-sm text-[#525252] mb-3">
+                  Through the massive distribution of our messenger angel, the
+                  Rhapsody of Realities, and strategic soul-winning exploits, we
+                  compel them to come in.
+                </p>
+                <p className="text-sm text-[#525252] mb-3">
+                  For us, we are laborers in this glorious dispensation,
+                  ensuring that the knowledge of the glory of God covers the
+                  earth as the waters cover the sea. <b>Habakkuk 2:14</b>
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg p-5 ">
+              <div>
+                <Image
+                  src="/images/about-build.png"
+                  width={1000}
+                  height={1000}
+                  alt="image"
+                />
+              </div>
+              <div className="py-6">
+                <h3 className="text-[#334797] text-md text-2xl font-bold mb-3">
+                  WIN
+                </h3>
+                <p className="text-sm text-[#525252] mb-3">
+                  We are fueled by a burning passion for the lost and a mandate
+                  to manifest the liquid love of Christ to our world as given to
+                  us by our man of God, Rev Dr Chris Oyakhilome DSc.DSc.DD. 
+                </p>
+                <p className="text-sm text-[#525252] mb-3">
+                  Through the massive distribution of our messenger angel, the
+                  Rhapsody of Realities, and strategic soul-winning exploits, we
+                  compel them to come in.
+                </p>
+                <p className="text-sm text-[#525252] mb-3">
+                  For us, we are laborers in this glorious dispensation,
+                  ensuring that the knowledge of the glory of God covers the
+                  earth as the waters cover the sea. <b>Habakkuk 2:14</b>
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg p-5 ">
+              <div>
+                <Image
+                  src="/images/about-send.png"
+                  width={1000}
+                  height={1000}
+                  alt="image"
+                />
+              </div>
+              <div className="py-6">
+                <h3 className="text-[#334797] text-md text-2xl font-bold mb-3">
+                  WIN
+                </h3>
+                <p className="text-sm text-[#525252] mb-3">
+                  We are fueled by a burning passion for the lost and a mandate
+                  to manifest the liquid love of Christ to our world as given to
+                  us by our man of God, Rev Dr Chris Oyakhilome DSc.DSc.DD. 
+                </p>
+                <p className="text-sm text-[#525252] mb-3">
+                  Through the massive distribution of our messenger angel, the
+                  Rhapsody of Realities, and strategic soul-winning exploits, we
+                  compel them to come in.
+                </p>
+                <p className="text-sm text-[#525252] mb-3">
+                  For us, we are laborers in this glorious dispensation,
+                  ensuring that the knowledge of the glory of God covers the
+                  earth as the waters cover the sea. <b>Habakkuk 2:14</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <FAQ />
       <Footer />
