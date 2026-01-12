@@ -48,7 +48,7 @@ export default function FAQ() {
             tellus, luctus nec ullamcorper mattis amet, consectetur.
           </p>
 
-          <button className="mt-6 flex items-center gap-2 text-xs font-semibold text-[#262626]">
+          <button className="mt-6 flex items-center gap-2 text-xs font-semibold text-[#262626] cursor-pointer">
             View More
             <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-[#262626]">
               →
@@ -72,7 +72,11 @@ export default function FAQ() {
                   <h3 className="text-md font-semibold text-[#262626]">
                     {faq.question}
                   </h3>
-                  {isOpen ? <Minus size={16} /> : <Plus size={16} />}
+                  {isOpen ? (
+                    <Minus size={16} className="cursor-pointer" />
+                  ) : (
+                    <Plus size={16} className="cursor-pointer"  />
+                  )}
                 </div>
 
                 {isOpen && (

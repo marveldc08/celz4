@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean; isStatic?:boolean }) {
   const [isMobile, setIsMobile] = useState(false);
@@ -20,66 +21,66 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
         >
           <span className={`text-lg font-semibold text-white`}>CELZ4</span>
           <nav className="hidden items-center gap-8 md:flex">
-            <a
+            <Link
               href="/"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white  hover:border-b-2 ${
                 pathName == "/" && "border-b-3"
               }`}
             >
               Home
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/about-us"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
             >
               About Us
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
             >
               {" "}
               Plan your visit
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
             >
               FAQs
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
             >
               {" "}
               Sermons
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
             >
               Events
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
             >
               Media
-            </a>
-            <a
+            </Link>
+            <Link
               href="/join-service"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 ${
                 pathName == "/join-service" && "border-b-3"
               } `}
             >
               Join the service
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
             >
               Contact Us
-            </a>
+            </Link>
           </nav>
 
           <button
@@ -115,7 +116,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             CELZ4
           </span>
           <nav className="hidden items-center gap-8 md:flex">
-            <a
+            <Link
               href="/"
               className={`text-sm font-medium  ${
                 isScrolled
@@ -124,9 +125,9 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               }  hover:border-b-2 ${pathName == "/" && "border-b-3"}`}
             >
               Home
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/about-us"
               className={`text-sm font-medium  ${
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
@@ -134,8 +135,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               }  hover:border-b-2 `}
             >
               About Us
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium  ${
                 isScrolled
@@ -145,8 +146,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             >
               {" "}
               Plan your visit
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium  ${
                 isScrolled
@@ -155,8 +156,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               }  hover:border-b-2 `}
             >
               FAQs
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium  ${
                 isScrolled
@@ -166,8 +167,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             >
               {" "}
               Sermons
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium  ${
                 isScrolled
@@ -176,8 +177,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               }  hover:border-b-2 `}
             >
               Events
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium  ${
                 isScrolled
@@ -186,8 +187,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               }  hover:border-b-2 `}
             >
               Media
-            </a>
-            <a
+            </Link>
+            <Link
               href="/join-service"
               className={`text-sm font-medium  ${
                 isScrolled
@@ -196,8 +197,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               }  hover:border-b-2 `}
             >
               Join the service
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium  ${
                 isScrolled
@@ -208,7 +209,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               }`}
             >
               Contact Us
-            </a>
+            </Link>
           </nav>
 
           <button
@@ -243,7 +244,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             CELZ4
           </span>
           <nav className="hidden items-center gap-8 md:flex">
-            <a
+            <Link
               href="/"
               className={`text-sm font-medium  ${
                 isStatic &&
@@ -251,17 +252,17 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               }  hover:border-b-2 ${pathName == "/" && "border-b-3"}`}
             >
               Home
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/about-us"
               className={`text-sm font-medium  ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
               } hover:border-b-2 `}
             >
               About Us
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium ${
                 isStatic &&
@@ -270,8 +271,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             >
               {" "}
               Plan your visit
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium  ${
                 isStatic &&
@@ -279,8 +280,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               }  hover:border-b-2 `}
             >
               FAQs
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium ${
                 isStatic &&
@@ -289,8 +290,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             >
               {" "}
               Sermons
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium ${
                 isStatic &&
@@ -298,8 +299,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               } hover:border-b-2 `}
             >
               Events
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium ${
                 isStatic &&
@@ -307,8 +308,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               } hover:border-b-2 `}
             >
               Media
-            </a>
-            <a
+            </Link>
+            <Link
               href="/join-service"
               className={`text-sm font-medium  ${
                 isStatic &&
@@ -318,8 +319,8 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               }`}
             >
               Join the service
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className={`text-sm font-medium  ${
                 isStatic &&
@@ -327,7 +328,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               } hover:border-b-2 `}
             >
               Contact Us
-            </a>
+            </Link>
           </nav>
 
           <button
@@ -362,43 +363,43 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             }`}
             onClick={() => setIsMobile(false)}
           >
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
             onClick={() => setIsMobile(false)}
           >
-            <a href="#">About Us</a>
+            <Link href="/about-us">About Us</Link>
           </li>
           <li
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
             onClick={() => setIsMobile(false)}
           >
-            <a href="#">Plan your visit</a>
+            <Link href="#">Plan your visit</Link>
           </li>
           <li
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
             onClick={() => setIsMobile(false)}
           >
-            <a href="#">FAQs</a>
+            <Link href="#">FAQs</Link>
           </li>
           <li
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
             onClick={() => setIsMobile(false)}
           >
-            <a href="#">Sermons</a>
+            <Link href="#">Sermons</Link>
           </li>
           <li
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
             onClick={() => setIsMobile(false)}
           >
-            <a href="#">Events</a>
+            <Link href="#">Events</Link>
           </li>
           <li
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
             onClick={() => setIsMobile(false)}
           >
-            <a href="#">Media</a>
+            <Link href="#">Media</Link>
           </li>
           <li
             className={` rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
@@ -406,13 +407,13 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             }`}
             onClick={() => setIsMobile(false)}
           >
-            <a href="/join-service">Join the service</a>
+            <Link href="/join-service">Join the service</Link>
           </li>
           <li
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
             onClick={() => setIsMobile(false)}
           >
-            <a href="#">Contact Us</a>
+            <Link href="#">Contact Us</Link>
           </li>
         </ul>
       </div>
