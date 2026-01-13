@@ -49,7 +49,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               FAQs
             </Link>
             <Link
-              href="#"
+              href="/sermons"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
             >
               {" "}
@@ -158,7 +158,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               FAQs
             </Link>
             <Link
-              href="#"
+              href="/sermons"
               className={`text-sm font-medium  ${
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
@@ -282,7 +282,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               FAQs
             </Link>
             <Link
-              href="#"
+              href="/sermons"
               className={`text-sm font-medium ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
@@ -387,7 +387,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
             onClick={() => setIsMobile(false)}
           >
-            <Link href="#">Sermons</Link>
+            <Link href="/sermons">Sermons</Link>
           </li>
           <li
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"

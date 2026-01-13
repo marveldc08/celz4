@@ -3,9 +3,10 @@ import Header from '@/components/Header'
 import CountDoownTimer  from "@/components/CountDownTimer"
 import React from 'react'
 import { useState } from "react";
-import { Download, Play, Share2 } from "lucide-react";
+import { Download, Share2 } from "lucide-react";
 import FAQ from '@/components/Faq';
 import Footer from '@/components/Footer';
+import Jumbotron from '@/components/Jumbotron';
 
 const TABS = [
   "Zonal healing stream",
@@ -21,8 +22,14 @@ const page = () => {
   return (
     <div>
       <Header isStatic={true} />
+      <Jumbotron
+        heading="Join the Service"
+        subtext="Watch live programs"
+        hasBtn={false}
+        bgImage="/images/children.png"
+      />
       <main className="flex flex-col items-center justify-center">
-        <section className="relative h-[30vh] md:h-[50vh] w-full bg-[url('/images/children.png')] bg-cover bg-center">
+        {/* <section className="relative h-[30vh] md:h-[50vh] w-full bg-[url('/images/children.png')] bg-cover bg-center">
           <div className="absolute inset-0 bg-black/50 z-10" />
           <div className="relative z-10 flex h-full items-center justify-center text-center">
             <div className=" px-6 text-white">
@@ -30,14 +37,13 @@ const page = () => {
                 Join the Service
               </h1>
               <p className="mt-4 text-sm md:text-base">Watch live programs</p>
-              
             </div>
           </div>
-        </section>
+        </section> */}
         <CountDoownTimer targetDate={date.toISOString()} />
-        <WatchLiveSection/>
-        <FAQ/>
-        <Footer/>
+        <WatchLiveSection />
+        <FAQ />
+        <Footer />
       </main>
     </div>
   );
@@ -73,7 +79,7 @@ function WatchLiveSection() {
 
       {/* Video Wrapper */}
       <div className="relative overflow-hidden rounded-xl flex flex-col items-center justify-center">
-        <div className="relative w-full md:w-[900px] aspect-video">
+        <div className="relative w-full md:w-225 aspect-video">
           <iframe
             src={`https://www.youtube.com/embed/u3i_4ZlFcdY`}
             title="YouTube video player"
