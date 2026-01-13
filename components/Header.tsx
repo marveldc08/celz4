@@ -36,7 +36,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               About Us
             </Link>
             <Link
-              href="#"
+              href="/plan-your-visit"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
             >
               {" "}
@@ -137,7 +137,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               About Us
             </Link>
             <Link
-              href="#"
+              href="/plan-your-visit"
               className={`text-sm font-medium  ${
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
@@ -263,7 +263,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               About Us
             </Link>
             <Link
-              href="#"
+              href="/plan-your-visit"
               className={`text-sm font-medium ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
@@ -338,7 +338,11 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
           >
             <Menu />
           </button>
-          <button aria-label="Open menu" className={`hidden md:block rounded-md px-4 py-1 text-white ${isStatic && "bg-[#202C5E]"}`}
+          <button
+            aria-label="Open menu"
+            className={`hidden md:block rounded-md px-4 py-1 text-white ${
+              isStatic && "bg-[#202C5E]"
+            }`}
           >
             Login
           </button>
@@ -371,7 +375,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
             onClick={() => setIsMobile(false)}
           >
-            <Link href="#">Plan your visit</Link>
+            <Link href="/plan-your-visit">Plan your visit</Link>
           </li>
           <li
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
