@@ -2,11 +2,11 @@
 import { MapPin } from 'lucide-react';
 import React from 'react'
 
-const Jumbotron = ({heading, subtext, hasBtn, btnText, bgImage}: {heading:string, subtext?:string, hasBtn:boolean, btnText?:string, bgImage:string}) => {
+const Jumbotron = ({heading, subtext, hasBtn, btnText, bgImage}: {heading?:string, subtext?:string, hasBtn:boolean, btnText?:string, bgImage:string}) => {
     console.log("img", bgImage)
   return (
     <div
-      className={`w-full h-[60vh] bg-[url(/images/children.png)] bg-cover bg-center flex flex-col justify-center items-center text-center p-4`}
+      className={`w-full h-[60vh] bg-[url(${bgImage})] bg-cover bg-center flex flex-col justify-center items-center text-center p-4`}
     >
       <h1 className="text-white text-2xl font-bold md:text-5xl">{heading}</h1>
       {subtext && <p className="text-white mt-4 text-sm md:text-base">{subtext}</p>}

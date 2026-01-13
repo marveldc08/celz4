@@ -43,7 +43,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               Plan your visit
             </Link>
             <Link
-              href="#"
+              href="/faq"
               className={`text-sm font-medium "text-white/90 hover:text-white border-b-white hover:border-b-2 `}
             >
               FAQs
@@ -148,7 +148,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               Plan your visit
             </Link>
             <Link
-              href="#"
+              href="/faq"
               className={`text-sm font-medium  ${
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
@@ -273,7 +273,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               Plan your visit
             </Link>
             <Link
-              href="#"
+              href="/faq"
               className={`text-sm font-medium  ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
@@ -381,7 +381,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
             onClick={() => setIsMobile(false)}
           >
-            <Link href="#">FAQs</Link>
+            <Link href="/faq">FAQs</Link>
           </li>
           <li
             className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
