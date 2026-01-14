@@ -1,11 +1,18 @@
+'use client'
 import Footer from '@/components/Footer';
 import Header from '@/components/Header'
 import Jumbotron from '@/components/Jumbotron'
 import { ChevronRight, Download, Play, Share2 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import React from 'react'
 
-const page = () => {
+const Page = () => {
+  const router = useRouter();
+
+  const navigate = (path: string) => {
+    router.push(path);
+  };
   return (
     <div>
       <Header isStatic={true} />
@@ -146,7 +153,7 @@ const page = () => {
                     <button className="cursor-pointer">
                       <Download className="w-5 h-5" />
                     </button>
-                    <button className="cursor-pointer">
+                    <button className="cursor-pointer" onClick={() => navigate('/sermons/sermon')}>
                       <Play className="w-5 h-5" />
                     </button>
                   </div>
@@ -167,4 +174,4 @@ const page = () => {
   );
 }
 
-export default page
+export default Page
