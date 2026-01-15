@@ -1,6 +1,6 @@
 "use client"
 import Header from '@/components/Header'
-import CountDoownTimer  from "@/components/CountDownTimer"
+import CountDownTimer  from "@/components/CountDownTimer"
 import React from 'react'
 import { useState } from "react";
 import { Download, Share2 } from "lucide-react";
@@ -18,7 +18,8 @@ const TABS = [
 ];
 
 const page = () => {
-    const date = new Date()
+    const eventDate = new Date();
+    eventDate.setDate(eventDate.getDate() + 100)
   return (
     <div>
       <Header isStatic={true} />
@@ -40,7 +41,7 @@ const page = () => {
             </div>
           </div>
         </section> */}
-        <CountDoownTimer targetDate={date.toISOString()} />
+        <CountDownTimer targetDate={eventDate.toISOString()} />
         <WatchLiveSection />
         <FAQ />
         <Footer />
