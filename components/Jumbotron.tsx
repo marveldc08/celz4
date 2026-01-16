@@ -6,7 +6,7 @@ const Jumbotron = ({heading, subtext, hasBtn, btnText, bgImage}: {heading?:strin
    
   return (
     <div
-      className={`w-full h-[60vh] bg-[url(/images/sermons.jpg)] bg-cover bg-center flex flex-col justify-center items-center text-center p-4`}
+      className={`w-full h-[60vh] bg-[url(/images/children.png)] bg-cover bg-center flex flex-col justify-center items-center text-center p-4`}
     >
       <h1 className="text-white text-2xl font-bold md:text-5xl">{heading}</h1>
       {subtext && (

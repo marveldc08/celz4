@@ -132,7 +132,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2 ${pathName == "/about-us" && "border-b-3"}`}
             >
               About Us
             </Link>
@@ -142,7 +142,9 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2 ${
+                pathName == "/plan-your-visit" && "border-b-3"
+              }`}
             >
               {" "}
               Plan your visit
@@ -153,7 +155,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2 ${pathName == "/faq" && "border-b-3"}`}
             >
               FAQs
             </Link>
@@ -163,7 +165,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2   ${pathName == "/sermons" && "border-b-3"}`}
             >
               {" "}
               Sermons
@@ -174,17 +176,17 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2 ${pathName == "/events" && "border-b-3"} `}
             >
               Events
             </Link>
             <Link
-              href="#"
+              href="/media"
               className={`text-sm font-medium  ${
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2 ${pathName == "/media" && "border-b-3"} `}
             >
               Media
             </Link>
@@ -194,18 +196,18 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2 ${pathName == "/join-service" && "border-b-3"}`}
             >
               Join the service
             </Link>
             <Link
-              href="#"
+              href="/contact-us"
               className={`text-sm font-medium  ${
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
               }  hover:border-b-2 ${
-                pathName == "/join-service" && "border-b-3"
+                pathName == "/contact-us" && "border-b-3"
               }`}
             >
               Contact Us
@@ -258,7 +260,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               className={`text-sm font-medium  ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
-              } hover:border-b-2 `}
+              } hover:border-b-2 ${pathName == "/about-us" && "border-b-3"}`}
             >
               About Us
             </Link>
@@ -267,7 +269,9 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               className={`text-sm font-medium ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2 ${
+                pathName == "/plan-your-visit" && "border-b-3"
+              }`}
             >
               {" "}
               Plan your visit
@@ -277,7 +281,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               className={`text-sm font-medium  ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
-              }  hover:border-b-2 `}
+              }  hover:border-b-2 ${pathName == "/faq" && "border-b-3"}`}
             >
               FAQs
             </Link>
@@ -286,7 +290,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               className={`text-sm font-medium ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
-              } hover:border-b-2 `}
+              } hover:border-b-2 ${pathName == "/sermons" && "border-b-3"}`}
             >
               {" "}
               Sermons
@@ -296,16 +300,16 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               className={`text-sm font-medium ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
-              } hover:border-b-2 `}
+              } hover:border-b-2 ${pathName == "/events" && "border-b-3"} `}
             >
               Events
             </Link>
             <Link
-              href="#"
+              href="/media"
               className={`text-sm font-medium ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
-              } hover:border-b-2 `}
+              } hover:border-b-2 ${pathName == "/media" && "border-b-3"}`}
             >
               Media
             </Link>
@@ -321,11 +325,11 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
               Join the service
             </Link>
             <Link
-              href="#"
+              href="/contact-us"
               className={`text-sm font-medium  ${
                 isStatic &&
                 "text-[#262626] hover:text-[#262626] border-b-[#262626]"
-              } hover:border-b-2 `}
+              } hover:border-b-2 ${pathName == "/contact-us" && "border-b-3"}`}
             >
               Contact Us
             </Link>

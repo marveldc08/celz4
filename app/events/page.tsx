@@ -6,9 +6,11 @@ import Header from '@/components/Header'
 import Jumbotron from '@/components/Jumbotron'
 import { ChevronDown, Search } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation"
 import React, {  useState } from "react";
 
 const Page = () => {
+  const router = useRouter();
     const eventdate = new Date();
     eventdate.setDate(eventdate.getDate() + 100); 
 
@@ -50,7 +52,7 @@ const Page = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`pb-3 transition ${
+                  className={`pb-3 transition cursor-pointer ${
                     activeTab === tab
                       ? "text-gray-900 border-b-6 border-[#C6A94D] font-medium"
                       : "hover:text-gray-800"
@@ -60,60 +62,336 @@ const Page = () => {
                 </button>
               ))}
             </div>
-
-            <div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {Array.from({ length: 9 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="bg-white rounded-xl shadow-sm overflow-hidden"
-                  >
-                    {/* Image */}
-                    <div className="relative h-44 bg-gray-200 flex items-center justify-center">
-                      <div className="absolute top-0 left-0 w-full h-full">
-                        <Image
-                          src="/images/media.png"
-                          alt="Event Image"
-                          className="object-cover w-full h-full"
-                          width={500}
-                          height={500}
-                        />
+            {activeTab === "All Events" && (
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {Array.from({ length: 9 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="bg-white rounded-xl shadow-sm overflow-hidden"
+                    >
+                      {/* Image */}
+                      <div className="relative h-44 bg-gray-200 flex items-center justify-center">
+                        <div className="absolute top-0 left-0 w-full h-full">
+                          <Image
+                            src="/images/media.png"
+                            alt="Event Image"
+                            className="object-cover w-full h-full"
+                            width={500}
+                            height={500}
+                          />
+                        </div>
+                        <div className="absolute top-0 right-0 w-[30%] h-full bg-[#202C5E] hover:bg-[#171717] flex flex-col justify-center items-center text-white px-4 py-2 rounded-t-r-lg text-md text-center">
+                          <p className="font-semibold">20th</p>
+                          <p>Nov</p>
+                        </div>
                       </div>
-                      <div className="absolute top-0 right-0 w-[30%] h-full bg-[#202C5E] hover:bg-[#171717] flex flex-col justify-center items-center text-white px-4 py-2 rounded-t-r-lg text-md text-center">
-                        <p className="font-semibold">20th</p>
-                        <p>Nov</p>
+
+                      {/* Content */}
+                      <div className="p-5">
+                        <p className="text-xs text-gray-500 mb-1">
+                          8:00 AM - 9:00 PM
+                        </p>
+
+                        <h3 className="font-semibold text-gray-900 mb-2">
+                          Minister’s Conference
+                        </h3>
+
+                        <p className="text-sm text-gray-500 mb-4 leading-relaxed">
+                          Description: Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit. Ut elit tellus, luctus lorem ipsum
+                          dolor...
+                        </p>
+
+                        <button className="w-full cursor-pointer  bg-[#202C5E] hover:bg-[#233066] text-white py-4 rounded-md text-sm" onClick={() => router.push('/events/details') }>
+                          Register
+                        </button>
                       </div>
                     </div>
+                  ))}
+                </div>
+                <div className="flex justify-center items-center mt-12 w-full ">
+                  <button className="bg-[#202C5E] cursor-pointer text-white px-12 py-3 rounded-md text-sm">
+                    See More
+                  </button>
+                </div>
+              </div>
+            )}
+            {activeTab === "Upcoming This Week" && (
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {Array.from({ length: 3 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="bg-white rounded-xl shadow-sm overflow-hidden"
+                    >
+                      {/* Image */}
+                      <div className="relative h-44 bg-gray-200 flex items-center justify-center">
+                        <div className="absolute top-0 left-0 w-full h-full">
+                          <Image
+                            src="/images/media.png"
+                            alt="Event Image"
+                            className="object-cover w-full h-full"
+                            width={500}
+                            height={500}
+                          />
+                        </div>
+                        <div className="absolute top-0 right-0 w-[30%] h-full bg-[#202C5E] hover:bg-[#171717] flex flex-col justify-center items-center text-white px-4 py-2 rounded-t-r-lg text-md text-center">
+                          <p className="font-semibold">20th</p>
+                          <p>Nov</p>
+                        </div>
+                      </div>
 
-                    {/* Content */}
-                    <div className="p-5">
-                      <p className="text-xs text-gray-500 mb-1">
-                        8:00 AM - 9:00 PM
-                      </p>
+                      {/* Content */}
+                      <div className="p-5">
+                        <p className="text-xs text-gray-500 mb-1">
+                          8:00 AM - 9:00 PM
+                        </p>
 
-                      <h3 className="font-semibold text-gray-900 mb-2">
-                        Minister’s Conference
-                      </h3>
+                        <h3 className="font-semibold text-gray-900 mb-2">
+                          Minister’s Conference
+                        </h3>
 
-                      <p className="text-sm text-gray-500 mb-4 leading-relaxed">
-                        Description: Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Ut elit tellus, luctus lorem ipsum
-                        dolor...
-                      </p>
+                        <p className="text-sm text-gray-500 mb-4 leading-relaxed">
+                          Description: Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit. Ut elit tellus, luctus lorem ipsum
+                          dolor...
+                        </p>
 
-                      <button className="w-full cursor-pointer  bg-[#202C5E] hover:bg-[#233066] text-white py-4 rounded-md text-sm">
-                        Register
-                      </button>
+                        <button className="w-full cursor-pointer  bg-[#202C5E] hover:bg-[#233066] text-white py-4 rounded-md text-sm">
+                          Register
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+                <div className="flex justify-center items-center mt-12 w-full ">
+                  <button className="bg-[#202C5E] cursor-pointer text-white px-12 py-3 rounded-md text-sm">
+                    See More
+                  </button>
+                </div>
               </div>
-              <div className="flex justify-center items-center mt-12 w-full ">
-                <button className="bg-[#202C5E] cursor-pointer text-white px-12 py-3 rounded-md text-sm">
-                  See More
-                </button>
+            )}
+            {activeTab === "Past Events" && (
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {Array.from({ length: 7 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="bg-white rounded-xl shadow-sm overflow-hidden"
+                    >
+                      {/* Image */}
+                      <div className="relative h-44 bg-gray-200 flex items-center justify-center">
+                        <div className="absolute top-0 left-0 w-full h-full">
+                          <Image
+                            src="/images/media.png"
+                            alt="Event Image"
+                            className="object-cover w-full h-full"
+                            width={500}
+                            height={500}
+                          />
+                        </div>
+                        <div className="absolute top-0 right-0 w-[30%] h-full bg-[#202C5E] hover:bg-[#171717] flex flex-col justify-center items-center text-white px-4 py-2 rounded-t-r-lg text-md text-center">
+                          <p className="font-semibold">20th</p>
+                          <p>Nov</p>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-5">
+                        <p className="text-xs text-gray-500 mb-1">
+                          8:00 AM - 9:00 PM
+                        </p>
+
+                        <h3 className="font-semibold text-gray-900 mb-2">
+                          Minister’s Conference
+                        </h3>
+
+                        <p className="text-sm text-gray-500 mb-4 leading-relaxed">
+                          Description: Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit. Ut elit tellus, luctus lorem ipsum
+                          dolor...
+                        </p>
+
+                        <button className="w-full cursor-pointer  bg-[#202C5E] hover:bg-[#233066] text-white py-4 rounded-md text-sm">
+                          View
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex justify-center items-center mt-12 w-full ">
+                  <button className="bg-[#202C5E] cursor-pointer text-white px-12 py-3 rounded-md text-sm">
+                    See More
+                  </button>
+                </div>
               </div>
-            </div>
+            )}
+            {activeTab === "Outreach" && (
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="bg-white rounded-xl shadow-sm overflow-hidden"
+                    >
+                      {/* Image */}
+                      <div className="relative h-44 bg-gray-200 flex items-center justify-center">
+                        <div className="absolute top-0 left-0 w-full h-full">
+                          <Image
+                            src="/images/children.png"
+                            alt="Event Image"
+                            className="object-cover w-full h-full"
+                            width={500}
+                            height={500}
+                          />
+                        </div>
+                        <div className="absolute top-0 right-0 w-[30%] h-full bg-[#202C5E] hover:bg-[#171717] flex flex-col justify-center items-center text-white px-4 py-2 rounded-t-r-lg text-md text-center">
+                          <p className="font-semibold">20th</p>
+                          <p>Nov</p>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-5">
+                        <p className="text-xs text-gray-500 mb-1">
+                          8:00 AM - 9:00 PM
+                        </p>
+
+                        <h3 className="font-semibold text-gray-900 mb-2">
+                          Minister’s Conference
+                        </h3>
+
+                        <p className="text-sm text-gray-500 mb-4 leading-relaxed">
+                          Description: Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit. Ut elit tellus, luctus lorem ipsum
+                          dolor...
+                        </p>
+
+                        <button className="w-full cursor-pointer  bg-[#202C5E] hover:bg-[#233066] text-white py-4 rounded-md text-sm">
+                          View
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex justify-center items-center mt-12 w-full ">
+                  <button className="bg-[#202C5E] cursor-pointer text-white px-12 py-3 rounded-md text-sm">
+                    See More
+                  </button>
+                </div>
+              </div>
+            )}
+            {activeTab === "Revival" && (
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="bg-white rounded-xl shadow-sm overflow-hidden"
+                    >
+                      {/* Image */}
+                      <div className="relative h-44 bg-gray-200 flex items-center justify-center">
+                        <div className="absolute top-0 left-0 w-full h-full">
+                          <Image
+                            src="/images/outreach.png"
+                            alt="Event Image"
+                            className="object-cover w-full h-full"
+                            width={500}
+                            height={500}
+                          />
+                        </div>
+                        <div className="absolute top-0 right-0 w-[30%] h-full bg-[#202C5E] hover:bg-[#171717] flex flex-col justify-center items-center text-white px-4 py-2 rounded-t-r-lg text-md text-center">
+                          <p className="font-semibold">20th</p>
+                          <p>Nov</p>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-5">
+                        <p className="text-xs text-gray-500 mb-1">
+                          8:00 AM - 9:00 PM
+                        </p>
+
+                        <h3 className="font-semibold text-gray-900 mb-2">
+                          Minister’s Conference
+                        </h3>
+
+                        <p className="text-sm text-gray-500 mb-4 leading-relaxed">
+                          Description: Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit. Ut elit tellus, luctus lorem ipsum
+                          dolor...
+                        </p>
+
+                        <button className="w-full cursor-pointer  bg-[#202C5E] hover:bg-[#233066] text-white py-4 rounded-md text-sm">
+                          View
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex justify-center items-center mt-12 w-full ">
+                  <button className="bg-[#202C5E] cursor-pointer text-white px-12 py-3 rounded-md text-sm">
+                    See More
+                  </button>
+                </div>
+              </div>
+            )}
+            {activeTab === "Youth&kids" && (
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {Array.from({ length: 4 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="bg-white rounded-xl shadow-sm overflow-hidden"
+                    >
+                      {/* Image */}
+                      <div className="relative h-44 bg-gray-200 flex items-center justify-center">
+                        <div className="absolute top-0 left-0 w-full h-full">
+                          <Image
+                            src="/images/media.png"
+                            alt="Event Image"
+                            className="object-cover w-full h-full"
+                            width={500}
+                            height={500}
+                          />
+                        </div>
+                        <div className="absolute top-0 right-0 w-[30%] h-full bg-[#202C5E] hover:bg-[#171717] flex flex-col justify-center items-center text-white px-4 py-2 rounded-t-r-lg text-md text-center">
+                          <p className="font-semibold">20th</p>
+                          <p>Nov</p>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-5">
+                        <p className="text-xs text-gray-500 mb-1">
+                          8:00 AM - 9:00 PM
+                        </p>
+
+                        <h3 className="font-semibold text-gray-900 mb-2">
+                          Minister’s Conference
+                        </h3>
+
+                        <p className="text-sm text-gray-500 mb-4 leading-relaxed">
+                          Description: Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit. Ut elit tellus, luctus lorem ipsum
+                          dolor...
+                        </p>
+
+                        <button className="w-full cursor-pointer  bg-[#202C5E] hover:bg-[#233066] text-white py-4 rounded-md text-sm">
+                          View
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex justify-center items-center mt-12 w-full ">
+                  <button className="bg-[#202C5E] cursor-pointer text-white px-12 py-3 rounded-md text-sm">
+                    See More
+                  </button>
+                </div>
+              </div>
+            )}
 
             {/* CALENDAR */}
             <div className="mt-20">
@@ -132,7 +410,7 @@ const Page = () => {
                     <select
                       name="day"
                       id="day"
-                      className="bg-white px-4 py-4 rounded-md text-[#525252] text-xs"
+                      className="bg-white px-4 py-4 rounded-md text-[#525252] text-xs cursor-pointer"
                     >
                       <option value="">Filter by Day </option>
                       <option value="monday">Monday</option>
@@ -147,7 +425,7 @@ const Page = () => {
                     <select
                       name="month"
                       id="month"
-                      className="bg-white px-4 py-4 rounded-md text-[#525252] text-xs"
+                      className="bg-white px-4 py-4 rounded-md text-[#525252] text-xs cursor-pointer"
                     >
                       <option value="">Filter by Month </option>
                       <option value="january">January</option>
@@ -185,7 +463,7 @@ const Page = () => {
                     {days.map((day) => (
                       <div
                         key={day}
-                        className="text-xs text-gray-500 text-center pb-2 border-b"
+                        className="text-xs text-gray-500 text-center pb-2 border-b border-x border-gray-200"
                       >
                         <p>{day}</p>
                         <p className="font-medium">20/11</p>
@@ -193,11 +471,12 @@ const Page = () => {
                     ))}
 
                     {/* Time rows */}
+
                     {hours.map((hour, i) => (
                       <>
                         <div
                           key={hour}
-                          className="text-xs text-gray-400 py-6 border-r"
+                          className="text-xs text-gray-400 py-6 border-r border-y border-gray-200 "
                         >
                           {hour}
                         </div>
@@ -205,7 +484,7 @@ const Page = () => {
                         {days.map((_, d) => (
                           <div
                             key={d}
-                            className="border-r border-b relative h-20"
+                            className="border-r border-b border-gray-200 relative h-20"
                           >
                             {i === 0 && d === 0 && (
                               <CalendarEvent
