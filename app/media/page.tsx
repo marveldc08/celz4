@@ -30,7 +30,7 @@ const Page = () => {
         heading="Media"
         subtext="All Videos/Photos"
         hasBtn={false}
-        bgImage={`url([/images/children.png])`}
+        bgImage={`/images/children.png`}
       />
       <EventCountdown targetDate={eventdate.toISOString()} />
       <main>

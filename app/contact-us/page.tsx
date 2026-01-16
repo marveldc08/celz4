@@ -1,9 +1,6 @@
 import FAQ from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Jumbotron from "@/components/Jumbotron";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";

@@ -43,17 +43,7 @@ const page = () => {
         bgImage="/images/children.png"
       />
       <main className="flex flex-col items-center justify-center">
-        {/* <section className="relative h-[30vh] md:h-[50vh] w-full bg-[url('/images/children.png')] bg-cover bg-center">
-          <div className="absolute inset-0 bg-black/50 z-10" />
-          <div className="relative z-10 flex h-full items-center justify-center text-center">
-            <div className=" px-6 text-white">
-              <h1 className="text-2xl font-bold md:text-5xl">
-                Join the Service
-              </h1>
-              <p className="mt-4 text-sm md:text-base">Watch live programs</p>
-            </div>
-          </div>
-        </section> */}
+       
         <CountDownTimer targetDate={eventDate.toISOString()} />
         <WatchLiveSection />
         <FAQ />

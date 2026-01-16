@@ -37,7 +37,7 @@ const Page = () => {
         subtext="All Events"
         hasBtn={true}
         btnText="Locate the church "
-        bgImage={`url([/images/children.png])`}
+        bgImage={`/images/children.png`}
       />
       <EventCountdown targetDate={eventdate.toISOString()} />
       <main>
@@ -473,9 +473,9 @@ const Page = () => {
                     {/* Time rows */}
 
                     {hours.map((hour, i) => (
-                      <>
+                      <div key={hour} >
                         <div
-                          key={hour}
+                       
                           className="text-xs text-gray-400 py-6 border-r border-y border-gray-200 "
                         >
                           {hour}
@@ -510,7 +510,7 @@ const Page = () => {
                             )}
                           </div>
                         ))}
-                      </>
+                      </div>
                     ))}
                   </div>
                 </div>

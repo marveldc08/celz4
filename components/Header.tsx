@@ -196,7 +196,9 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
-              }  hover:border-b-2 ${pathName == "/join-service" && "border-b-3"}`}
+              }  hover:border-b-2 ${
+                pathName == "/join-service" && "border-b-3"
+              }`}
             >
               Join the service
             </Link>
@@ -206,9 +208,7 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
                 isScrolled
                   ? "text-[#262626] hover:text-[#262626] border-b-[#262626]"
                   : "text-white/90 hover:text-white border-b-white"
-              }  hover:border-b-2 ${
-                pathName == "/contact-us" && "border-b-3"
-              }`}
+              }  hover:border-b-2 ${pathName == "/contact-us" && "border-b-3"}`}
             >
               Contact Us
             </Link>
@@ -370,40 +370,52 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             <Link href="/">Home</Link>
           </li>
           <li
-            className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
+            className={`  rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+              pathName == "/about-us" && "bg-[#171717] text-white"
+            } `}
             onClick={() => setIsMobile(false)}
           >
             <Link href="/about-us">About Us</Link>
           </li>
           <li
-            className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
+            className={`  rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+              pathName == "/plan-your-visit" && "bg-[#171717] text-white"
+            }`}
             onClick={() => setIsMobile(false)}
           >
             <Link href="/plan-your-visit">Plan your visit</Link>
           </li>
           <li
-            className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
+            className={` rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+              pathName == "/faq" && "bg-[#171717] text-white"
+            }`}
             onClick={() => setIsMobile(false)}
           >
             <Link href="/faq">FAQs</Link>
           </li>
           <li
-            className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
+            className={`rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+              pathName == "/sermons" && "bg-[#171717] text-white"
+            }`}
             onClick={() => setIsMobile(false)}
           >
             <Link href="/sermons">Sermons</Link>
           </li>
           <li
-            className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
+            className={`rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+              pathName == "/events" && "bg-[#171717] text-white"
+            }`}
             onClick={() => setIsMobile(false)}
           >
             <Link href="/events">Events</Link>
           </li>
           <li
-            className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
+            className={`rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+              pathName == "/media" && "bg-[#171717] text-white"
+            }`}
             onClick={() => setIsMobile(false)}
           >
-            <Link href="#">Media</Link>
+            <Link href="/media">Media</Link>
           </li>
           <li
             className={` rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
@@ -414,10 +426,12 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
             <Link href="/join-service">Join the service</Link>
           </li>
           <li
-            className=" rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white"
+            className={`rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+              pathName == "/contact-us" && "bg-[#171717] text-white"
+            }`}
             onClick={() => setIsMobile(false)}
           >
-            <Link href="#">Contact Us</Link>
+            <Link href="/contact-us">Contact Us</Link>
           </li>
         </ul>
       </div>

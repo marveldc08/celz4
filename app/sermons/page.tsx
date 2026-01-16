@@ -20,7 +20,7 @@ const Page = () => {
         heading="Sermons"
         subtext="All Sermons"
         hasBtn={false}
-        bgImage={`url([/images/sermons.jpg])`}
+        bgImage={`/images/sermons.jpg`}
       />
       <main>
         <section className="w-full py-20 px-5 md:px-10">
