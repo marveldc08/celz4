@@ -3,10 +3,24 @@ import Header from '@/components/Header'
 import CountDownTimer  from "@/components/CountDownTimer"
 import React from 'react'
 import { useState } from "react";
-import { Download, Share2 } from "lucide-react";
+import { Download, Play, Share2 } from "lucide-react";
 import FAQ from '@/components/Faq';
 import Footer from '@/components/Footer';
 import Jumbotron from '@/components/Jumbotron';
+
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 const TABS = [
   "Zonal healing stream",
@@ -54,6 +68,12 @@ const page = () => {
 
 function WatchLiveSection() {
   const [activeTab, setActiveTab] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(false);
+
+  const handleSubmit = () => {
+    setAutoPlay(true);
+
+  }
 
   return (
     <section className="w-full bg-[#dfe3f2]/16 px-6 md:px-64 py-14">
@@ -81,8 +101,67 @@ function WatchLiveSection() {
       {/* Video Wrapper */}
       <div className="relative overflow-hidden rounded-xl flex flex-col items-center justify-center">
         <div className="relative w-full md:w-225 aspect-video">
+          {autoPlay ? null : (
+            <div className=" absolute z-10 inset-0 flex items-center justify-center rounded-lg bg-black/30">
+              <Dialog>
+                <form>
+                  <DialogTrigger asChild>
+                    <button className="w-18 h-15 text-white cursor-pointer rounded-xl bg-red-600 flex items-center justify-center">
+                      {" "}
+                      <Play />{" "}
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-106.25 p-0">
+                    <DialogHeader className="bg-[#FAFAFA] p-4 rounded-t-lg ">
+                      <DialogTitle className="flex flex-inline justify-center items-center font-medium">
+                        {" "}
+                        <div className="rounded-full w-4 h-4 bg-red-600 mr-2"></div>{" "}
+                        Join live Service
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="grid gap-4 p-6">
+                      <div className="grid gap-3">
+                        <Label htmlFor="name-1">Name</Label>
+                        <Input
+                          id="name-1"
+                          name="name"
+                          defaultValue="Pedro Duarte"
+                        />
+                      </div>
+                      <div className="grid gap-3">
+                        <Label htmlFor="email">email</Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          defaultValue="exampleson@gmail.com"
+                          className="outline-none"
+                        />
+                      </div>
+                    </div>
+                    <DialogFooter className="p-6">
+                      <DialogClose asChild>
+                        <Button variant="outline" className="cursor-pointer">
+                          Cancel
+                        </Button>
+                      </DialogClose>
+                      <Button
+                        type="submit"
+                        className="bg-[#202C5E] cursor-pointer"
+                        onClick={() => handleSubmit()}
+                      >
+                        Submit
+                      </Button>
+                    </DialogFooter>
+                  </DialogContent>
+                </form>
+              </Dialog>
+            </div>
+          )}
+
           <iframe
-            src={`https://www.youtube.com/embed/u3i_4ZlFcdY`}
+            src={`https://www.youtube.com/embed/u3i_4ZlFcdY?autoplay=${
+              autoPlay ? 1 : 0
+            }`}
             title="YouTube video player"
             className="absolute inset-0 h-full w-full rounded-lg"
             frameBorder="0"
@@ -165,6 +244,11 @@ function TranscriptItem({
     </div>
   );
 }
+
+
+
+
+
 
 
 export default page
