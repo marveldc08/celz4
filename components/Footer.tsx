@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -32,9 +33,9 @@ export default function Footer() {
       </section>
       <footer className="bg-[#1E2F5C] pt-40 pb-10 text-white w-full">
         <div className="mx-auto  px-6">
-          <div className="grid gap-12 grid-cols-3 md:grid-cols-4 ">
+          <div className="grid gap-12 grid-cols-1 md:grid-cols-4 ">
             {/* Logo */}
-            <div>
+            <div className="flex flex-col justify-center items-center md:items-start ">
               <h4 className="mb-3 text-md font-semibold">CELZ4</h4>
               <p className="text-sm leading-relaxed text-white/70">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -43,17 +44,22 @@ export default function Footer() {
             </div>
 
             {/* Home */}
-            <div>
-              <h5 className="mb-3 text-md font-semibold">Home</h5>
-              <ul className="space-y-2 text-sm text-white/70">
-                <li>About Us</li>
-                <li>Careers</li>
-                <li>Blog</li>
-              </ul>
+            <div className="flex flex-col justify-center items-center md:items-start space-y-2 space-x-2 text-sm text-white/70">
+              <Link href="/" className="mb-3 text-md font-semibold">
+                Home
+              </Link>
+
+              <Link href={"/plan-your-visit"}>Plan Your Visit</Link>
+              <Link href={"/faq"}>FAQs</Link>
+              <Link href={"/sermons"}>Sermons</Link>
+              <Link href={"/events"}>Events</Link>
+              <Link href={"/media"}>Media</Link>
+              <Link href={"/join-service"}>Join The Service</Link>
+              <Link href={"/contact-us"}>Contact Us</Link>
             </div>
 
             {/* Media */}
-            <div>
+            <div className="flex flex-col justify-center items-center md:items-start  ">
               <h5 className="mb-3 text-md font-semibold">Media</h5>
               <ul className="space-y-2 text-sm text-white/70">
                 <li>Privacy Policy</li>
@@ -63,11 +69,11 @@ export default function Footer() {
             </div>
 
             {/* Locate */}
-            <div className="flex flex-col justify-center align-middle">
-              <div>
+            <div className="flex flex-col justify-center items-center md:items-start align-middle">
+              <div className="text-center">
                 <h5 className="mb-3 text-md font-semibold">Locate us</h5>
                 <p className="mb-3 text-sm text-white/70">
-                    20 Akinode street, opposite cinema, Lagos Nigeria
+                  20 Akinode street, opposite cinema, Lagos Nigeria
                 </p>
               </div>
               <div className="flex-none md:flex md:flex-row">

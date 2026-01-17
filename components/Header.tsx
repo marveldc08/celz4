@@ -362,76 +362,94 @@ export default function Header({ isScrolled, isStatic }: { isScrolled?: boolean;
         </div>
         <ul className="text-center px-3">
           <li
-            className={` rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+            className={` rounded-md flex text-sm font-medium active:bg-[#171717] active:text-white ${
               pathName == "/" && "bg-[#171717] text-white"
             }`}
             onClick={() => setIsMobile(false)}
           >
-            <Link href="/">Home</Link>
+            <Link href="/" className="w-full px-20 py-4">
+              Home
+            </Link>
           </li>
           <li
-            className={`  rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+            className={`flex rounded-md text-sm font-medium active:bg-[#171717] active:text-white ${
               pathName == "/about-us" && "bg-[#171717] text-white"
             } `}
             onClick={() => setIsMobile(false)}
           >
-            <Link href="/about-us">About Us</Link>
+            <Link href="/about-us" className="w-full px-20 py-4">
+              About Us
+            </Link>
           </li>
           <li
-            className={`  rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+            className={`rounded-md flex text-sm font-medium active:bg-[#171717] active:text-white ${
               pathName == "/plan-your-visit" && "bg-[#171717] text-white"
             }`}
             onClick={() => setIsMobile(false)}
           >
-            <Link href="/plan-your-visit">Plan your visit</Link>
+            <Link href="/plan-your-visit" className="w-full px-20 py-4">
+              Plan your visit
+            </Link>
           </li>
           <li
-            className={` rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+            className={` rounded-md flex text-sm font-medium active:bg-[#171717] active:text-white ${
               pathName == "/faq" && "bg-[#171717] text-white"
             }`}
             onClick={() => setIsMobile(false)}
           >
-            <Link href="/faq">FAQs</Link>
+            <Link href="/faq" className="w-full px-20 py-4">
+              FAQs
+            </Link>
           </li>
           <li
-            className={`rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+            className={`rounded-md flex text-sm font-medium active:bg-[#171717] active:text-white ${
               pathName == "/sermons" && "bg-[#171717] text-white"
             }`}
             onClick={() => setIsMobile(false)}
           >
-            <Link href="/sermons">Sermons</Link>
+            <Link href="/sermons" className="w-full px-20 py-4">
+              Sermons
+            </Link>
           </li>
           <li
-            className={`rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+            className={`rounded-md flex text-sm font-medium active:bg-[#171717] active:text-white ${
               pathName == "/events" && "bg-[#171717] text-white"
             }`}
             onClick={() => setIsMobile(false)}
           >
-            <Link href="/events">Events</Link>
+            <Link href="/events" className="w-full px-20 py-4">
+              Events
+            </Link>
           </li>
           <li
-            className={`rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+            className={`rounded-md flex text-sm font-medium active:bg-[#171717] active:text-white ${
               pathName == "/media" && "bg-[#171717] text-white"
             }`}
             onClick={() => setIsMobile(false)}
           >
-            <Link href="/media">Media</Link>
+            <Link href="/media" className="w-full px-20 py-4">
+              Media
+            </Link>
           </li>
           <li
-            className={` rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+            className={`flex rounded-md  text-sm font-medium active:bg-[#171717] active:text-white ${
               pathName == "/join-service" && "bg-[#171717] text-white"
             }`}
             onClick={() => setIsMobile(false)}
           >
-            <Link href="/join-service">Join the service</Link>
+            <Link href="/join-service" className="w-full px-20 py-4">
+              Join the service
+            </Link>
           </li>
           <li
-            className={`rounded-md border-b border-b-gray-300 py-1 text-sm font-medium active:bg-[#171717] active:text-white ${
+            className={`rounded-md flex text-sm font-medium active:bg-[#171717] active:text-white ${
               pathName == "/contact-us" && "bg-[#171717] text-white"
             }`}
             onClick={() => setIsMobile(false)}
           >
-            <Link href="/contact-us">Contact Us</Link>
+            <Link href="/contact-us" className="w-full px-20 py-4">
+              Contact Us
+            </Link>
           </li>
         </ul>
       </div>

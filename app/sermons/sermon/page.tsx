@@ -129,7 +129,7 @@ const TABS = ["Sermon Notes", "Transcript"];
 
 function SermonSection() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState('notes');
+  const [activeTab, setActiveTab] = useState("sermonnotes");
 
   return (
     <section className="w-full px-3 py-4">
@@ -168,11 +168,11 @@ function SermonSection() {
           </div>
         </div>
         <div className="w-full md:w-[50%] flex justify-end align-middle ">
-          <div className="py-4 w-full align-middle flex justify-center md:justify-end gap-5">
-            <button className="flex flex-inline gap-2 rounded-md bg-[#BCBFCE33] border border-[#202C5E] px-3 md:px-5 py-4 text-sm cursor-pointer text-[#202C5E]">
+          <div className="py-4 w-full align-middle flex flex-col md:flex-row justify-center  md:justify-end gap-5">
+            <button className="flex flex-inline gap-2 items-center justify-center rounded-md bg-[#BCBFCE33] border border-[#202C5E] px-2 md:px-5 py-4 text-sm cursor-pointer text-[#202C5E]">
               Download Audio <Download className="w-4 h-4" />
             </button>
-            <button className="flex flex-inline rounded-md bg-[#202C5E] px-5 py-4 text-sm cursor-pointer text-[#F5F5F5]">
+            <button className="flex flex-inline rounded-md items-center justify-center bg-[#202C5E] px-2 md:px-5 py-4 text-sm cursor-pointer text-[#F5F5F5]">
               Download Notes <ChevronDown />
             </button>
           </div>
@@ -257,9 +257,9 @@ function SermonSection() {
                 Mattew 12:30-46 Verse 30 :
               </h4>
               <p className="text-sm text-[#525252] mt-5">
-                We work by spirit spirt me We work by spirit spirt meWe work
-                by spirit spirt meWe work by spirit spirt meWe work by We work
                 We work by spirit spirt me We work by spirit spirt meWe work by
+                spirit spirt meWe work by spirit spirt meWe work by We work We
+                work by spirit spirt me We work by spirit spirt meWe work by
                 spirit spirt meWe work by spirit spirt meWe work by We work
               </p>
             </div>
@@ -276,7 +276,6 @@ function SermonSection() {
                 work by spirit spirt me We work by spirit spirt meWe work by
                 spirit spirt meWe work by spirit spirt meWe work by We work
               </li>
-             
             </ul>
           </div>
         </div>
