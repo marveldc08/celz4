@@ -4,7 +4,7 @@ import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Header from '@/components/Header'
 import Jumbotron from '@/components/Jumbotron'
-import { ChevronDown, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation"
 import React, {  useState } from "react";
